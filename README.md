@@ -1,5 +1,6 @@
 ## Hi there 👋
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=thdwjdrl401)](https://solved.ac/thdwjdrl401/)
+[![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=thdwjdrl401)](https://solved.ac/thdwjdrl401/)
 <!--
 **thdwjdrl401/thdwjdrl401** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
