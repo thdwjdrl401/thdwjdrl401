@@ -17,7 +17,7 @@ Java/Spring 기반 백엔드 개발자입니다.
 
 ## Selected Work
 
-> 회사 프로젝트는 코드가 비공개라, git 히스토리와 실제 작업 기반으로 정리한 기술 회고로 대신합니다 → **[Portfolio](https://github.com/thdwjdrl401/dev-retrospective)**
+> 회사 프로젝트는 코드가 비공개라, git 히스토리와 실제 작업 기반으로 정리한 기술 회고로 대신합니다 → **[DevRetrospective](https://github.com/thdwjdrl401/dev-retrospective)**
 
 - **조회 구조 재설계** — 관리자 조회 화면이 한 달 조회 시 10초 이상 → 전부 가져와 후처리하던 구조가 원인임을 확인하고, 목록 단위 페이징 후 상세만 재조회하는 2단계 구조로 재설계해 0.5초 이내로 단축
 - **메모리 평문 잔류 취약점 개선** — 단말 메모리에 주민번호가 평문으로 남는 문제를, Dart String 불변성이 원인임을 확인하고 가변 버퍼 + 즉시 암호화 구조로 재설계
@@ -53,7 +53,7 @@ Java/Spring 기반 백엔드 개발자입니다.
 
 | Repo | 설명 |
 |---|---|
-| **[portfolio](https://github.com/thdwjdrl401/dev-retrospective)** | 회사 프로젝트 기술 회고 (모이소·덕성여대·토마스·카썹) — 코드 비공개, 기여 정리 |
+| **[DevRetrospective](https://github.com/thdwjdrl401/dev-retrospective)** | 회사 프로젝트 기술 회고 (모이소·덕성여대·토마스·카썹) — 코드 비공개, 기여 정리 |
 | **[LingoLens](https://github.com/thdwjdrl401/LingoLens)** | 다국어 웹페이지 번역 Chrome 확장 (TypeScript, MV3) — 단독 개발 |
 | **[TripCraft](https://github.com/thdwjdrl401/TripCraft)** | 이동 시간 기반 여행 일정 플래너 (Spring Boot, 멀티 API 통합) — 팀 |
 
