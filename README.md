@@ -55,7 +55,7 @@ Java/Spring 기반 백엔드 개발자입니다.
 |---|---|
 | **[DevRetrospective](https://github.com/thdwjdrl401/dev_retrospective)** | 회사 프로젝트 기술 회고 (모이소·덕성여대·토마스·카썹) — 코드 비공개, 기여 정리 |
 | **[LingoLens](https://github.com/thdwjdrl401/LingoLens)** | 다국어 웹페이지 번역 Chrome 확장 (TypeScript, MV3) — 단독 개발 |
-| **[TripCraft](https://github.com/thdwjdrl401/TripCraft)** | 이동 시간 기반 여행 일정 플래너 (Spring Boot, 멀티 API 통합) — 팀 |
+<!--| **[TripCraft](https://github.com/thdwjdrl401/TripCraft)** | 이동 시간 기반 여행 일정 플래너 (Spring Boot, 멀티 API 통합) — 팀 | -->
 
 ---
 
