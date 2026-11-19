@@ -1,20 +1,17 @@
-안녕하세요, 낭만 있는 백엔드 개발자 송정기입니다.
-
-기술을 이해하고, 상상한 것을 직접 구현하며, 할 수 있는 일을 넓혀가는 과정 그 자체를 즐깁니다.
-
----
+# 안녕하세요, 낭만 있는 백엔드 개발자 송정기입니다.
+저는 기술을 이해하고, 상상한 것을 직접 구현하며, 할 수 있는 일을 넓혀가는 과정 그 자체를 즐겁게 생각합니다.
 
 ## About Me
 
-공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영 1년 7개월
-
-Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker
+공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영 1년 7개월<br>
+<sub>Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker</sub>
 
 ### 주요 성과
 
-- 웹 푸시 100만 건 발송: 61시간 21분 → 5분 48초
-- 디바이스 텔레메트리 초당 10,000건 적재
-- 관리자 조회 응답: 10초 이상 → 0.5초 이내
+- 웹 푸시 100만 건 발송: **61시간 21분 → 5분 48초**
+- 디바이스 텔레메트리(위치, 배터리, 네트워크 상태 등의 정보) **초당 10,000건** 적재
+- 관리자 웹 근무상황표 조회: **10초 이상 → 0.5초 이내**
+- 보안 취약점 **8개 항목** 조치, 이행진단 통과
 
 <br>
 
@@ -54,7 +51,7 @@ Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker
 - HTTP/2 멀티플렉싱으로 최대 800건 동시 발송
 - 암호 객체 재사용: 건당 5.95ms → 0.36ms
 - DB OOM → 커서 기반 분할 처리
-- [코드](https://github.com/thdwjdrl401/jiphyeonjeon/tree/master/backend/src/main/java/com/liveclass/notification) · [측정 환경](https://github.com/thdwjdrl401/jiphyeonjeon/tree/master/bench) · [개선 과정 문서](https://portfolio.thdwjdrl.com/7pmmt0sl/notification/)
+- [코드](https://github.com/thdwjdrl401/jiphyeonjeon/tree/master/backend/src/main/java/com/liveclass/notification) · [개선 과정 문서](https://portfolio.thdwjdrl.com/7pmmt0sl/notification/)
 
 </td>
 </tr>
@@ -90,7 +87,7 @@ Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker
 
 - Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
 - N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
-- 외부 앱·웹 취약점 진단 지적 사항 중 8개 항목 조치, 재진단 통과 · [조치 내역](https://portfolio.thdwjdrl.com/7pmmt0sl/security/)
+- 외부 앱·웹 취약점 진단 지적 사항 중 8개 항목 조치, 이행진단 통과 · [조치 내역](https://portfolio.thdwjdrl.com/7pmmt0sl/security/)
 - [Google Play](https://play.google.com/store/apps/details?id=com.iconloop.gb_mydata) · [App Store](https://apps.apple.com/kr/app/id1668273536) · [기술 회고](https://github.com/thdwjdrl401/dev_retrospective)
 
 </td>
