@@ -13,6 +13,8 @@
 
 ### [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
 
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis Streams](https://img.shields.io/badge/Redis_Streams-FF4438?style=flat-square&logo=redis&logoColor=white) ![LiveKit](https://img.shields.io/badge/LiveKit-1F1F1F?style=flat-square) ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
+
 <table>
 <tr>
 <td width="48%"><img src="assets/jip-screen.jpg" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널"></td>
@@ -29,6 +31,8 @@
 
 ### [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
 
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/push-architecture-dark.png">
   <img src="assets/push-architecture.png" width="680" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개">
@@ -43,6 +47,8 @@
 
 ### [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
 
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![TimescaleDB](https://img.shields.io/badge/TimescaleDB-FDB515?style=flat-square&logo=timescale&logoColor=black) ![Redis Streams](https://img.shields.io/badge/Redis_Streams-FF4438?style=flat-square&logo=redis&logoColor=white) ![MQTT](https://img.shields.io/badge/MQTT-660066?style=flat-square&logo=mqtt&logoColor=white) ![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
 <table>
 <tr>
 <td width="48%"><img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" alt="Locus 실시간 모니터링 화면"></td>
@@ -56,7 +62,9 @@
 </tr>
 </table>
 
-### [모이소] 경상북도 모바일 도민증 (에즈넷)
+### [모이소] 경상북도 모바일 도민증
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 
 - Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
 - N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
@@ -67,8 +75,13 @@
 
 ### 기술 노트
 
-- [Spring Boot는 어떤 ApplicationContext를 사용할까](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/Spring%20Boot%EB%8A%94%20%EC%96%B4%EB%96%A4%20ApplicationContext%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C.md): AOT, Native Image 직접 빌드 비교
-- 브라우저의 요청은 스프링에 오기 전에 어디를 지날까 [1편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%80.md) · [2편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%802.md): Tomcat 11 소스 코드로 요청 처리 흐름 추적
+**[Spring Boot는 어떤 ApplicationContext를 사용할까](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/Spring%20Boot%EB%8A%94%20%EC%96%B4%EB%96%A4%20ApplicationContext%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C.md)**
+
+Spring Boot가 실제로 어떤 ApplicationContext를 쓰는지 내부 코드를 따라갔습니다. 그 과정에서 AOT 환경에서는 컨텍스트를 구성하는 방식이 달라진다는 점을 확인했고, 일반 JVM, AOT JVM, Native Image 세 방식을 직접 빌드해 실행을 비교했습니다.
+
+**브라우저의 요청은 스프링에 오기 전에 어디를 지날까** ([1편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%80.md) · [2편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%802.md))
+
+Tomcat 11.0.21 소스 코드에서 Coyote, CoyoteAdapter, Catalina, Pipeline/Valve를 거쳐 DispatcherServlet까지 요청 흐름을 추적했습니다. `Request.recycle()`로 객체 상태를 초기화해 다음 요청에 재사용하는 구조를 확인한 뒤로, 객체의 생성 비용과 생명주기를 함께 고려하게 되었습니다.
 
 ### 연락
 
