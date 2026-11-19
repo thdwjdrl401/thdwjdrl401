@@ -14,7 +14,7 @@
 
 <table>
 <tr>
-<td width="48%" valign="top"><img src="assets/jip-screen.jpg" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널"></td>
+<td width="48%" valign="top"><img src="assets/jip-live.gif" alt="집현전 라이브 강의 화면. 실시간 자막, 자막 시간 클릭 시 해당 시점 이동, 핵심 용어 패널"></td>
 <td valign="top">
 
 <sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
@@ -45,7 +45,7 @@
 - HTTP/2 멀티플렉싱으로 최대 800건 동시 발송
 - 암호 객체 재사용: 건당 5.95ms → 0.36ms
 - DB OOM → 커서 기반 분할 처리
-- [개선 과정 문서](https://portfolio.thdwjdrl.com/notification/)
+- [개선 과정 문서](https://portfolio.thdwjdrl.com/7pmmt0sl/notification/)
 
 </td>
 </tr>
@@ -81,7 +81,7 @@
 
 - Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
 - N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
-- 외부 앱·웹 취약점 진단 지적 사항 중 8개 항목 조치, 재진단 통과
+- 외부 앱·웹 취약점 진단 지적 사항 중 8개 항목 조치, 재진단 통과 · [조치 내역](https://portfolio.thdwjdrl.com/7pmmt0sl/security/)
 - [Google Play](https://play.google.com/store/apps/details?id=com.iconloop.gb_mydata) · [App Store](https://apps.apple.com/kr/app/id1668273536) · [기술 회고](https://github.com/thdwjdrl401/dev_retrospective)
 
 </td>
