@@ -5,11 +5,9 @@
 
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![TimescaleDB](https://img.shields.io/badge/TimescaleDB-FDB515?style=flat-square&logo=timescale&logoColor=black) ![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
----
+## 실무 경력
 
-## 실무
-
-### 모이소 · 경상북도 공공 마이데이터 플랫폼
+#### 모이소 · 경상북도 공공 마이데이터 플랫폼
 
 | 문제 | 조치 | 결과 |
 |---|---|---|
@@ -19,11 +17,9 @@
 
 <sub>코드 비공개 · [실무 기술 회고](https://github.com/thdwjdrl401/dev_retrospective)</sub>
 
----
+## 프로젝트
 
-## 개인 프로젝트
-
-### 100만 명 웹 푸시 발송 · 61시간 21분 → 5분 48초
+#### 100만 명 웹 푸시 발송 · 61시간 21분 → 5분 48초
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/push-architecture-dark.png">
@@ -41,7 +37,7 @@
 
 <sub>웹 푸시 1,097,488건 전부 성공 (유실·429·5xx 0건) · 코드 비공개 · [개선 과정 문서](https://portfolio.thdwjdrl.com/notification/)</sub>
 
-### [Locus](https://github.com/thdwjdrl401/locus) · 위치 데이터 적재 초당 33건 → 10,000건
+#### [Locus](https://github.com/thdwjdrl401/locus) · 위치 데이터 적재 초당 33건 → 10,000건
 
 <sub>측정 환경: 4코어 8GB 5400rpm HDD 단일 서버, k6</sub>
 
@@ -52,14 +48,12 @@
 
 <sub>[코드](https://github.com/thdwjdrl401/locus) · [부하 테스트 결과](https://github.com/thdwjdrl401/locus/blob/main/docs/PERFORMANCE.md) · [설계 결정 기록](https://github.com/thdwjdrl401/locus/tree/main/docs/decisions)</sub>
 
-### 집현전 · 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
+#### 집현전 · 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
 
 - Backend & Infra: WebRTC SFU(LiveKit) 자체 호스팅, 웹 푸시 알림
 - 실시간 자막: Redis Streams 별도 Consumer Group, eventId 멱등 저장, 커밋 후 WebSocket 전달
 
 <sub>코드 비공개</sub>
-
----
 
 ## 기술 노트
 
