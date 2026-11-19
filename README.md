@@ -11,12 +11,13 @@
 <br>
 
 ## [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
-<sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
 
 <table>
 <tr>
 <td width="48%"><img src="assets/jip-screen.jpg" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널"></td>
 <td>
+
+<sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
 
 - Backend & Infra 담당
 - WebRTC SFU(LiveKit) 자체 호스팅
@@ -29,12 +30,13 @@
 <br>
 
 ## [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
-<sub>Spring Boot · PostgreSQL · RabbitMQ · Docker · Prometheus · Grafana</sub>
 
 <table>
 <tr>
 <td width="48%"><img src="assets/push-architecture.png" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개"></td>
 <td>
+
+<sub>Spring Boot · PostgreSQL · RabbitMQ · Docker · Prometheus · Grafana</sub>
 
 - 발송 시간 **61시간 21분 → 5분 48초**
 - 게시와 발송 분리: Transactional Outbox, RabbitMQ
@@ -49,12 +51,13 @@
 <br>
 
 ## [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
-<sub>Spring Boot · TimescaleDB · Redis Streams · MQTT · k6 · Docker</sub>
 
 <table>
 <tr>
 <td width="48%"><img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" alt="Locus 실시간 모니터링 화면"></td>
 <td>
+
+<sub>Spring Boot · TimescaleDB · Redis Streams · MQTT · k6 · Docker</sub>
 
 - 4코어 서버에서 위치 데이터 **초당 10,000건**을 63분간 유실 없이 저장 (개선 전 초당 33건)
 - 디스크 I/O 병목 확인 → 배치 INSERT, TimescaleDB, 저장 워커 병렬화
@@ -66,12 +69,13 @@
 <br>
 
 ## [모이소] 경상북도 모바일 도민증
-<sub>Spring Boot · JPA · MySQL · Flutter</sub>
 
 <table>
 <tr>
 <td width="48%"><img src="assets/moiso-screens.jpg" alt="모이소 앱 화면. 디지털 도민증, 농어민수당 비대면 신청"></td>
 <td>
+
+<sub>Spring Boot · JPA · MySQL · Flutter</sub>
 
 - Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
 - N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
