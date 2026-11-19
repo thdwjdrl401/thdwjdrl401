@@ -2,7 +2,7 @@
 
 공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영 1년 7개월
 
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+<sub>Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker</sub>
 
 - **61시간 21분 → 5분 48초** 웹 푸시 100만 건 발송
 - **초당 10,000건** 위치 데이터 저장
@@ -13,7 +13,7 @@
 
 ### [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis Streams](https://img.shields.io/badge/Redis_Streams-FF4438?style=flat-square&logo=redis&logoColor=white) ![LiveKit](https://img.shields.io/badge/LiveKit-1F1F1F?style=flat-square) ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
+<sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
 
 <table>
 <tr>
@@ -31,12 +31,9 @@
 
 ### [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+<sub>Spring Boot · PostgreSQL · RabbitMQ · Docker · Prometheus · Grafana</sub>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/push-architecture-dark.png">
-  <img src="assets/push-architecture.png" width="680" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개">
-</picture>
+<img src="assets/push-architecture.png" width="680" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개">
 
 - 수신자 100만 명 발송 시간 **61시간 21분 → 5분 48초**
 - 강의 자료 게시와 알림 발송 분리: Transactional Outbox, RabbitMQ (게시 API 응답 0.42초)
@@ -47,7 +44,7 @@
 
 ### [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![TimescaleDB](https://img.shields.io/badge/TimescaleDB-FDB515?style=flat-square&logo=timescale&logoColor=black) ![Redis Streams](https://img.shields.io/badge/Redis_Streams-FF4438?style=flat-square&logo=redis&logoColor=white) ![MQTT](https://img.shields.io/badge/MQTT-660066?style=flat-square&logo=mqtt&logoColor=white) ![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+<sub>Spring Boot · TimescaleDB · Redis Streams · MQTT · k6 · Docker</sub>
 
 <table>
 <tr>
@@ -64,7 +61,7 @@
 
 ### [모이소] 경상북도 모바일 도민증
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+<sub>Spring Boot · JPA · MySQL · Flutter</sub>
 
 - Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
 - N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
