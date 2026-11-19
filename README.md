@@ -8,9 +8,9 @@
 - **10초 이상 → 0.5초 이내** 관리자 조회 응답
 - **8개 항목** 보안 취약점 조치, 재진단 통과
 
----
+<br>
 
-### [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
+## [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
 <sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
 
 <table>
@@ -26,8 +26,9 @@
 </td>
 </tr>
 </table>
+<br>
 
-### [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
+## [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
 <sub>Spring Boot · PostgreSQL · RabbitMQ · Docker · Prometheus · Grafana</sub>
 
 <table>
@@ -45,8 +46,9 @@
 </td>
 </tr>
 </table>
+<br>
 
-### [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
+## [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
 <sub>Spring Boot · TimescaleDB · Redis Streams · MQTT · k6 · Docker</sub>
 
 <table>
@@ -61,8 +63,9 @@
 </td>
 </tr>
 </table>
+<br>
 
-### [모이소] 경상북도 모바일 도민증
+## [모이소] 경상북도 모바일 도민증
 <sub>Spring Boot · JPA · MySQL · Flutter</sub>
 
 <table>
@@ -79,9 +82,9 @@
 </tr>
 </table>
 
----
+<br>
 
-### 기술 노트
+## 기술 노트
 
 - **[Spring Boot는 어떤 ApplicationContext를 사용할까](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/Spring%20Boot%EB%8A%94%20%EC%96%B4%EB%96%A4%20ApplicationContext%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C.md)**
   - Spring Boot가 실제로 어떤 ApplicationContext를 쓰는지 궁금해 내부 코드를 따라갔습니다.
