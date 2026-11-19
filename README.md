@@ -1,12 +1,20 @@
-# 송정기
+안녕하세요, 낭만 있는 백엔드 개발자 송정기입니다.
 
-공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영 1년 7개월<br>
-<sub>Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker</sub>
+기술을 이해하고, 상상한 것을 직접 구현하며, 할 수 있는 일을 넓혀가는 과정 그 자체를 즐깁니다.
 
-- **61시간 21분 → 5분 48초** 웹 푸시 100만 건 발송
-- **초당 10,000건** 디바이스 텔레메트리(위치, 배터리, 네트워크 상태 등의 정보) 적재
-- **10초 이상 → 0.5초 이내** 관리자 조회 응답
-- **8개 항목** 보안 취약점 조치, 재진단 통과
+---
+
+## About Me
+
+공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영 1년 7개월
+
+Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker
+
+### 주요 성과
+
+- 웹 푸시 100만 건 발송: 61시간 21분 → 5분 48초
+- 디바이스 텔레메트리 초당 10,000건 적재
+- 관리자 조회 응답: 10초 이상 → 0.5초 이내
 
 <br>
 
@@ -25,6 +33,7 @@
 - 실시간 채팅: STOMP over WebSocket
 - 배포: Docker, nginx
 - 웹 푸시 알림
+- [코드](https://github.com/thdwjdrl401/jiphyeonjeon)
 
 </td>
 </tr>
@@ -45,7 +54,7 @@
 - HTTP/2 멀티플렉싱으로 최대 800건 동시 발송
 - 암호 객체 재사용: 건당 5.95ms → 0.36ms
 - DB OOM → 커서 기반 분할 처리
-- [개선 과정 문서](https://portfolio.thdwjdrl.com/7pmmt0sl/notification/)
+- [코드](https://github.com/thdwjdrl401/jiphyeonjeon/tree/master/backend/src/main/java/com/liveclass/notification) · [측정 환경](https://github.com/thdwjdrl401/jiphyeonjeon/tree/master/bench) · [개선 과정 문서](https://portfolio.thdwjdrl.com/7pmmt0sl/notification/)
 
 </td>
 </tr>
@@ -95,7 +104,7 @@
 - **[Spring Boot는 어떤 ApplicationContext를 사용할까](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/Spring%20Boot%EB%8A%94%20%EC%96%B4%EB%96%A4%20ApplicationContext%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C.md)**
   - Spring Boot가 실제로 어떤 ApplicationContext를 쓰는지 궁금해 내부 코드를 따라갔습니다.
   - 따라가다 보니 AOT 환경에서는 컨텍스트를 구성하는 방식이 달라진다는 점을 발견했습니다.
-  - 직접 확인하려고 일반 JVM, AOT JVM, Native Image 세 방식으로 빌드해 실행을 비교했습니다.
+  - 직접 확인하려고 일반 JVM, AOT JVM, Native Image 세 방식으로 빌드해 실행을 비교했습니다. · [실험](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/tree/java/from-browser-to-spring-process/test_for_AOT)
 - **브라우저의 요청은 스프링에 오기 전에 어디를 지날까** ([1편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%80.md) · [2편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%802.md))
   - 요청이 DispatcherServlet에 닿기 전에 어디를 지나는지 궁금해 Tomcat 11.0.21 소스 코드를 따라갔습니다.
   - Coyote, CoyoteAdapter, Catalina, Pipeline/Valve를 거치는 흐름을 정리했습니다.
