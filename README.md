@@ -74,7 +74,7 @@
 
 <table>
 <tr>
-<td width="48%" valign="top"><img src="assets/moiso-screens.jpg" alt="모이소 앱 화면. 디지털 도민증, 농어민수당 비대면 신청"></td>
+<td width="48%" valign="top"><img src="assets/moiso-screens2.jpg" alt="모이소 앱 화면. 디지털 도민증, 농어민수당 비대면 신청"></td>
 <td valign="top">
 
 <sub>Spring Boot · JPA · MySQL · Flutter</sub>
