@@ -32,14 +32,10 @@
 
 <sub>SSAFY 6인 팀 · Backend & Infra · 우수상(3등) · 코드 비공개</sub>
 
-```mermaid
-flowchart LR
-  A[음성 인식] -->|XADD| B[(Redis Streams)]
-  B -->|backend 그룹| C[Spring 백엔드]
-  B -.->|ai 그룹| D[AI 질의응답 서버]
-  C -->|eventId 멱등 저장| E[(PostgreSQL)]
-  C -->|커밋 후 전송| F[브라우저 WebSocket]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/caption-flow-dark.png">
+  <img src="assets/caption-flow.png" width="100%" alt="음성 인식 → XADD → Redis Streams backend 그룹 → 수동 ACK → Spring 백엔드(eventId 멱등 저장) → 커밋 후 전송 → 브라우저 WebSocket. 같은 스트림 ai 그룹은 AI 질의응답 서버가 별도 소비">
+</picture>
 
 - **SFU 자체 호스팅**: LiveKit 기반 라이브 강의
 - **실시간 자막**: Redis Streams 별도 Consumer Group
@@ -51,16 +47,10 @@ flowchart LR
 
 <sub>개인 · 노트북 1대(물리 4코어), FCM Mock 서버(왕복 230ms) · 코드 비공개</sub>
 
-```mermaid
-flowchart LR
-  A[강의 자료 게시] --> B[(Outbox)]
-  B --> C[[팬아웃 큐]]
-  C --> D[팬아웃 워커 ×N]
-  D --> E[(알림 · Outbox)]
-  E --> F[[푸시 큐]]
-  F --> G[푸시 워커 ×N]
-  G --> H[FCM]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/push-flow-dark.png">
+  <img src="assets/push-flow.png" width="100%" alt="자료 게시 → Outbox → 팬아웃 큐 → 팬아웃 워커 ×N → 알림 Outbox → 푸시 큐 → 푸시 워커 ×N → FCM">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/push-results-dark.png">
@@ -84,8 +74,8 @@ flowchart LR
 <sub>개인 · 4코어 8GB 5400rpm HDD 단일 서버 · k6 부하 측정 · 코드 공개</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/locus-throughput-dark.png">
-  <img src="assets/locus-throughput.png" width="100%" alt="적재 처리량: 단건 INSERT 33, 배치 INSERT 1,437, TimescaleDB 하이퍼테이블 5,459, 배치 워커 16개 10,000 rows/s(목표 부하 유지)">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/locus-load-dark.png">
+  <img src="assets/locus-load.png" width="100%" alt="적재 처리량: 단건 INSERT 33, 배치 INSERT 1,437, TimescaleDB 하이퍼테이블 5,459, 배치 워커 16개 10,000 rows/s(목표 부하 유지)">
 </picture>
 
 - **초당 10,000건 63분 연속 적재**, 유실 0건
