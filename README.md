@@ -1,85 +1,54 @@
-# Song JeongKi
-## Backend Developer
+## 송정기 · 백엔드 개발자
 
-Java/Spring 기반 백엔드 개발자입니다. 공공 서비스를 기획부터 개발·배포·운영까지 단독으로 책임지며, 성능 저하·보안 취약점·WAF 장애·외부 API 연동을 로그와 데이터 흐름을 따라 원인부터 분석하고 개선해 왔습니다.
-익숙한 원인으로 단정하지 않고 실제 원인을 확인한 뒤 구조를 바로잡습니다 — 이 방식을 공개 코드로 보여주는 개인 프로젝트가 아래 **Locus**입니다.
+`Java` `Spring Boot` `MySQL` `PostgreSQL` `Redis` `RabbitMQ` `Docker`
 
----
-
-## Locus — 측정 주도 실시간 텔레메트리 파이프라인
-
-**[github.com/thdwjdrl401/locus](https://github.com/thdwjdrl401/locus)**  ·  Java · Spring Boot · TimescaleDB · Redis Streams · MQTT
-
-물리 디바이스(폰·로봇 등)가 위치·상태를 실시간으로 올리고 한 명이 다수를 모니터링하는 백본. 추측이 아니라 부하 측정으로 병목을 규명하고 개선합니다.
-
-- **단일 노후 박스(4코어·8GB·5400rpm HDD)에서 1만 대 × 1Hz를 전 구간(HTTP → Redis Streams → TimescaleDB) 60분+ 유실 없이 처리** — 발신 ≈ 수신 ≈ 저장을 양끝 정산으로 확인.
-- 적재 33 → 지속 10k rows/s: 병목을 단계마다 재현·귀속해 개선 — 커밋당 fsync는 배치(그룹 커밋)로, InnoDB 랜덤 쓰기는 TimescaleDB 순차 쓰기로, 단일 배치 워커는 N-워커 병렬화로. 인입 최대 처리량의 병목이 스토리지가 아니라 박스 CPU임을 코어 핀 6→8 선형 확장(12K→16K)으로 규명.
-- 인메모리 큐를 Redis Streams로 교체해 소비자를 컨슈머 그룹으로 분리 — `storage`(적재) · `monitoring`(WebSocket push) · `geofence`(판정). 적재 성공 후에만 `XACK`(at-least-once) + 포이즌 내성(손상 엔트리 드롭·카운트, 워커 생존).
-- 관제 조회 p95 8.65s → 35ms: 디바이스별 최신 조회의 상관 서브쿼리를 `LATERAL`로 재설계.
-- 디바이스 추상화(PHONE·AMR): 새 타입을 더해도 판정 엔진·엔티티는 불변, 경계는 ArchUnit이 빌드 단에서 강제. AMR 상태 스키마는 개방 표준(ROS 2·VDA5050) 참조로 독립 정의.
-- **지오펜스 판정 엔진(`core.engine`, 미션·타입 무지) — 진행 중(M5).** 로봇이 작업구역 경계를 넘나들면 ENTER/EXIT를 판정해 관제 화면에 이벤트로(아래 데모).
-
-<p align="center">
-  <img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" width="70%" alt="Locus 실시간 관제 — 로봇 지오펜스 판정"/>
-</p>
-
-각 단계의 before → 변경 → after → 해석은 측정 문서로, 결정과 기각한 대안은 [ADR](https://github.com/thdwjdrl401/locus/tree/main/docs/decisions)·[리스크 등록부](https://github.com/thdwjdrl401/locus/blob/main/docs/RISKS.md)로 공개합니다.
+- **실무 1년 7개월**: 공공 모바일 서비스(사용자 약 20만 명) 백엔드 개발·운영
+- **API 응답 시간 개선**: N+1 쿼리 해결로 관리자 조회 **10초 이상 → 0.5초 이내**
+- **보안 취약점 조치**: 외부 앱·웹 취약점 진단 지적 사항 중 **8개 항목** 조치, 재진단 통과
+- **부하 테스트 기반 성능 개선**: 웹 푸시 **100만 건** 발송, 위치 데이터 **초당 1만 건** 저장
 
 ---
 
-## 운영 경험
+### [집현전] 실시간 라이브 강의 플랫폼 (SSAFY 6인, 우수상)
 
-> 회사 프로젝트는 코드가 비공개라 git 히스토리·실제 작업 기반 기술 회고로 대신합니다 → **[DevRetrospective](https://github.com/thdwjdrl401/dev_retrospective)**
+<img src="assets/jip-screen.jpg" width="460" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널">
 
-약 20만 사용자 공공 플랫폼의 한 서비스를 화면 기획부터 배포·운영·감리 대응까지 단독으로 책임졌습니다.
+- Backend & Infra 담당
+- **WebRTC SFU(LiveKit) 자체 호스팅**
+- **실시간 자막**: STT 결과를 **Redis Streams**로 받아 저장 후 **WebSocket**으로 전달
+- **웹 푸시 알림**
 
-- **조회 구조 재설계** — 관리자 조회가 한 달치에서 10초 이상. 전부 가져와 후처리하던 구조가 원인임을 확인하고, 목록 단위 페이징 후 상세만 재조회하는 2단계로 재설계해 0.5초 이내로 단축.
-- **메모리 평문 잔류 취약점** — 단말 메모리에 주민번호가 평문으로 남는 문제를, Dart String 불변성이 원인임을 확인하고 가변 버퍼 + 즉시 암호화 구조로 재설계.
-- **WAF 장애 분석** — 이미지 업로드가 200 응답에도 실패하던 문제의 원인을 추적하고 정책 조정을 지원.
-- **외부 API 배치 동기화** — 보조금24/공공 API 연동, 변경분 중심의 데이터 동기화.
-- **JPA 더티 체킹 이슈** — 의도치 않은 UPDATE를 쿼리 로그로 추적해 원인 규명.
+### [집현전 확장] 100만 명 웹 푸시 발송 시스템 (개인)
 
----
+<img src="assets/push-architecture.png" width="620" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개">
 
-## Tech Stack
+- 수신자 100만 명 발송 시간 **61시간 21분 → 5분 48초**
+- 강의 자료 게시와 알림 발송 분리: **Transactional Outbox**, **RabbitMQ** (게시 API 응답 0.42초)
+- 푸시 워커 분리, **HTTP/2 멀티플렉싱**으로 최대 800건 동시 발송
+- Web Push 암호화 객체 재사용: 건당 **5.95ms → 0.36ms**
+- 수신자 100만 명 일괄 조회 시 DB OOM → **커서 기반 분할 처리**, `INSERT ... SELECT`
+- [개선 과정 문서](https://portfolio.thdwjdrl.com/notification/)
 
-### Main
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-59666C?style=for-the-badge)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+### [Locus] 디바이스 위치·상태 데이터 수집 및 모니터링 서버 (개인)
 
-### Data & Infra
-![TimescaleDB](https://img.shields.io/badge/TimescaleDB-FDB515?style=for-the-badge&logo=timescale&logoColor=black)
-![Redis](https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+<img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" width="460" alt="Locus 실시간 모니터링 화면">
 
-### Used
-![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![MQTT](https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white)
-![k6](https://img.shields.io/badge/k6-7D64FF?style=for-the-badge&logo=k6&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=for-the-badge)
+- 4코어 서버에서 위치 데이터 **초당 10,000건**을 63분간 유실 없이 저장 (개선 전 초당 33건)
+- 디스크 I/O 병목 확인 → **배치 INSERT**, **TimescaleDB**, 저장 워커 병렬화
+- [코드](https://github.com/thdwjdrl401/locus) · [부하 테스트 결과](https://github.com/thdwjdrl401/locus/blob/main/docs/PERFORMANCE.md)
+
+### [모이소] 경상북도 모바일 도민증 (에즈넷)
+
+- Spring Boot API 서버, 관리자 웹, Flutter 앱 개발·운영
+- [기술 회고](https://github.com/thdwjdrl401/dev_retrospective)
 
 ---
 
-## Repositories
+### 기술 노트
 
-| Repo | 설명 |
-|---|---|
-| **[Locus](https://github.com/thdwjdrl401/locus)** | 실시간 디바이스 텔레메트리 파이프라인 — 측정 주도(부하로 병목 규명·개선), Spring Boot·TimescaleDB·Redis Streams·MQTT. 단독 |
-| **[DevRetrospective](https://github.com/thdwjdrl401/dev_retrospective)** | 회사 프로젝트 기술 회고 (모이소·덕성여대·토마스·카썹) — 코드 비공개, 기여 정리 |
-| **[LingoLens](https://github.com/thdwjdrl401/LingoLens)** | 다국어 웹페이지 번역 Chrome 확장 (TypeScript, MV3) — 단독 개발 |
-<!--| **[TripCraft](https://github.com/thdwjdrl401/TripCraft)** | 이동 시간 기반 여행 일정 플래너 (Spring Boot, 멀티 API 통합) — 팀 | -->
+- [Spring Boot는 어떤 ApplicationContext를 사용할까](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/Spring%20Boot%EB%8A%94%20%EC%96%B4%EB%96%A4%20ApplicationContext%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C.md): **AOT**, **Native Image** 직접 빌드 비교
+- 브라우저의 요청은 스프링에 오기 전에 어디를 지날까 [1편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%80.md) · [2편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%802.md): **Tomcat 11** 소스 코드로 요청 처리 흐름 추적
 
----
+### 연락
 
-## Problem Solving
-
-BOJ로 자료구조와 알고리즘을 학습하고 있습니다. 정답 코드뿐 아니라 접근 방식, 실패 원인, 시간·공간복잡도를 함께 정리하는 것을 목표로 합니다.
-
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=thdwjdrl401)](https://solved.ac/thdwjdrl401/)
+- thdwjdrl401@gmail.com
