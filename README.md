@@ -4,7 +4,7 @@
 <sub>Java · Spring Boot · MySQL · PostgreSQL · Redis · RabbitMQ · Docker</sub>
 
 - **61시간 21분 → 5분 48초** 웹 푸시 100만 건 발송
-- **초당 10,000건** 텔레메트리(위치, 배터리·네트워크 등 디바이스 상태) 저장
+- **초당 10,000건** 디바이스 텔레메트리(위치, 배터리, 네트워크 상태 등의 정보) 적재
 - **10초 이상 → 0.5초 이내** 관리자 조회 응답
 - **8개 항목** 보안 취약점 조치, 재진단 통과
 
@@ -14,14 +14,16 @@
 
 <table>
 <tr>
-<td width="48%"><img src="assets/jip-screen.jpg" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널"></td>
-<td>
+<td width="48%" valign="top"><img src="assets/jip-screen.jpg" alt="라이브 강의 화면. 실시간 자막과 핵심 용어 패널"></td>
+<td valign="top">
 
 <sub>Spring Boot · PostgreSQL · Redis Streams · LiveKit · WebSocket</sub>
 
 - Backend & Infra 담당
-- WebRTC SFU(LiveKit) 자체 호스팅
+- 라이브 강의: LiveKit SFU 자체 호스팅, Egress 녹화 → HLS 다시보기
 - 실시간 자막: STT 결과를 Redis Streams로 받아 저장 후 WebSocket으로 전달
+- 실시간 채팅: STOMP over WebSocket
+- 배포: Docker, nginx
 - 웹 푸시 알림
 
 </td>
@@ -33,8 +35,8 @@
 
 <table>
 <tr>
-<td width="48%"><img src="assets/push-architecture.png" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개"></td>
-<td>
+<td width="48%" valign="top"><img src="assets/push-architecture.png" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개"></td>
+<td valign="top">
 
 <sub>Spring Boot · PostgreSQL · RabbitMQ · Docker · Prometheus · Grafana</sub>
 
@@ -54,12 +56,12 @@
 
 <table>
 <tr>
-<td width="48%"><img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" alt="Locus 실시간 모니터링 화면"></td>
-<td>
+<td width="48%" valign="top"><img src="https://github.com/thdwjdrl401/locus/raw/main/docs/assets/locus-robots.gif" alt="Locus 실시간 모니터링 화면"></td>
+<td valign="top">
 
 <sub>Spring Boot · TimescaleDB · Redis Streams · MQTT · k6 · Docker</sub>
 
-- 4코어 서버에서 텔레메트리 **초당 10,000건**을 63분간 유실 없이 저장 (개선 전 초당 33건)
+- **초당 10,000건**의 디바이스 텔레메트리 데이터를 4코어 서버에서 63분간 유실 없이 적재 (개선 전 초당 33건)
 - 디스크 I/O 병목 확인 → 배치 INSERT, TimescaleDB, 저장 워커 병렬화
 - [코드](https://github.com/thdwjdrl401/locus) · [부하 테스트 결과](https://github.com/thdwjdrl401/locus/blob/main/docs/PERFORMANCE.md)
 
@@ -72,8 +74,8 @@
 
 <table>
 <tr>
-<td width="48%"><img src="assets/moiso-screens.jpg" alt="모이소 앱 화면. 디지털 도민증, 농어민수당 비대면 신청"></td>
-<td>
+<td width="48%" valign="top"><img src="assets/moiso-screens.jpg" alt="모이소 앱 화면. 디지털 도민증, 농어민수당 비대면 신청"></td>
+<td valign="top">
 
 <sub>Spring Boot · JPA · MySQL · Flutter</sub>
 
