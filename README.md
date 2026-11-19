@@ -4,9 +4,10 @@
 
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-| 61시간 → 5분 | 초당 1만 건 | 10초 → 0.5초 | 8개 항목 |
-|:---:|:---:|:---:|:---:|
-| 웹 푸시 100만 건 발송 | 위치 데이터 저장 | 관리자 조회 응답 | 보안 취약점 조치 |
+- **61시간 21분 → 5분 48초** 웹 푸시 100만 건 발송
+- **초당 10,000건** 위치 데이터 저장
+- **10초 이상 → 0.5초 이내** 관리자 조회 응답
+- **8개 항목** 보안 취약점 조치, 재진단 통과
 
 ---
 
