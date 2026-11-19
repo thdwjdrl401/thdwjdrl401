@@ -32,9 +32,11 @@
 
 <sub>SSAFY 6인 팀 · Backend & Infra · 우수상(3등) · 코드 비공개</sub>
 
+<img src="assets/jip-live.gif" width="100%" alt="집현전 라이브 강의 화면. 실시간 자막, 자막 시간 클릭 시 해당 시점 이동, 핵심 용어 패널">
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/caption-flow-dark.png">
-  <img src="assets/caption-flow.png" width="100%" alt="음성 인식 → XADD → Redis Streams backend 그룹 → 수동 ACK → Spring 백엔드(eventId 멱등 저장) → 커밋 후 전송 → 브라우저 WebSocket. 같은 스트림 ai 그룹은 AI 질의응답 서버가 별도 소비">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/jip-caption-pipeline-dark.png">
+  <img src="assets/jip-caption-pipeline.png" width="100%" alt="실시간 자막 파이프라인: 음성 인식 → Redis Streams(backend 그룹, ai 그룹) → Spring 백엔드(수동 ACK, eventId 멱등 저장, 커밋 후 전송) → WebSocket">
 </picture>
 
 - **SFU 자체 호스팅**: LiveKit 기반 라이브 강의
@@ -48,8 +50,8 @@
 <sub>개인 · 노트북 1대(물리 4코어), FCM Mock 서버(왕복 230ms) · 코드 비공개</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/push-flow-dark.png">
-  <img src="assets/push-flow.png" width="100%" alt="자료 게시 → Outbox → 팬아웃 큐 → 팬아웃 워커 ×N → 알림 Outbox → 푸시 큐 → 푸시 워커 ×N → FCM">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/push-architecture-dark.png">
+  <img src="assets/push-architecture.png" width="100%" alt="강의 자료 게시 → Outbox → RabbitMQ 팬아웃 큐 → 팬아웃 워커 N개 → notification 테이블과 Outbox → 웹 푸시 큐 → 푸시 워커 N개">
 </picture>
 
 <picture>
@@ -72,6 +74,8 @@
 ### Locus · 디바이스 위치·상태 데이터 수집 서버
 
 <sub>개인 · 4코어 8GB 5400rpm HDD 단일 서버 · k6 부하 측정 · 코드 공개</sub>
+
+<img src="assets/locus-phone-live.gif" width="100%" alt="Locus 실시간 관제 화면. 디바이스 50대 위치와 상태, 지오펜스 진입·이탈 이벤트">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/locus-load-dark.png">
