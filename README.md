@@ -82,7 +82,3 @@ Spring Boot가 실제로 어떤 ApplicationContext를 쓰는지 내부 코드를
 **브라우저의 요청은 스프링에 오기 전에 어디를 지날까** ([1편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%80.md) · [2편](https://github.com/SSAFY-CS-STUDY-15th/SongJeongKi/blob/java/from-browser-to-spring-process/%5BJAVA%5D-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EC%9A%94%EC%B2%AD%EC%9D%B4%20%EC%8A%A4%ED%94%84%EB%A7%81%EA%B9%8C%EC%A7%80%20%EC%98%A4%EA%B8%B0%EA%B9%8C%EC%A7%802.md))
 
 Tomcat 11.0.21 소스 코드에서 Coyote, CoyoteAdapter, Catalina, Pipeline/Valve를 거쳐 DispatcherServlet까지 요청 흐름을 추적했습니다. `Request.recycle()`로 객체 상태를 초기화해 다음 요청에 재사용하는 구조를 확인한 뒤로, 객체의 생성 비용과 생명주기를 함께 고려하게 되었습니다.
-
-### 연락
-
-- thdwjdrl401@gmail.com
